@@ -3,7 +3,7 @@
  *
  */
 
-@import '../base/base-index';
+// @import '../base/base-index';
 
 .navbar {
     background-color: $primary-color;
@@ -14,9 +14,21 @@
 }
 
 .menu-bars {
-    margin-left: 2rem;
-    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+    font-size: 1.3rem;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        border-radius: 50%;
+        transition: box-shadow 0.3s;
+        box-shadow: 0 0 0 1px $white-color;
+        padding: 5px;
+    }
 }
 
 .nav-menu {
@@ -45,11 +57,12 @@
     list-style: none;
     height: 60px;
     font-family: $font-family-primary;
+    letter-spacing: $letter-spacing-primary;
 
     a {
         text-decoration: none;
-        color: #f5f5f5;
-        font-size: 18px;
+        color: $white-color;
+        font-size: $font-size-h3;
         width: 95%;
         height: 100%;
         display: flex;
@@ -80,17 +93,4 @@
 
 span {
     margin-left: 16px;
-}
-
-.home,
-.about,
-.donate,
-.news,
-.statistics,
-.thailand {
-    display: flex;
-    height: 90vh;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
 }

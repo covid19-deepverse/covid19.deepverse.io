@@ -10,4 +10,19 @@
     height: 100vh;
     color: $white-color;
     padding: 30px;
+    text-transform: $text-transform;
+}
+
+.home,
+.about,
+.donate,
+.news,
+.statistics,
+.thailand {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    letter-spacing: $letter-spacing-primary;
 }

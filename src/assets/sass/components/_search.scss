@@ -4,7 +4,19 @@
  */
 
 .search {
-    margin-left: 2rem;
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
     font-size: 1.3rem;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        border-radius: 50%;
+        transition: box-shadow 0.3s;
+        box-shadow: 0 0 0 1px $white-color;
+        padding: 5px;
+    }
 }
