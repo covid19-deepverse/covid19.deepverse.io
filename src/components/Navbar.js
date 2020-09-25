@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as HiIcons from 'react-icons/hi';
-import * as FiIcons from 'react-icons/fi';
 import { SidebarData } from './SidebarData';
 import { IconContext } from 'react-icons';
+import Search from './Search';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -16,9 +16,7 @@ function Navbar() {
           <Link to="#" className="menu-bars">
             <HiIcons.HiOutlineMenuAlt1 onClick={showSidebar} />
           </Link>
-          <div className="search">
-            <FiIcons.FiSearch />
-          </div>
+          <Search />
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className="nav-menu-items" onClick={showSidebar}>
