@@ -18,11 +18,12 @@
 .donate,
 .news,
 .statistics,
-.thailand {
+.thailand,
+.blog {
     display: flex;
-    height: 90vh;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    height: 80vh;
+    font-size: $font-size-h1;
     letter-spacing: $letter-spacing-primary;
 }
