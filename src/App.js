@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // IMPORT COMPONENTS
 import Navbar from './components/Navbar';
-import { Circular, Cube, RotateScale, Scale } from 'styled-loaders-react';
+import { Scale } from 'styled-loaders-react';
 
 // IMPORT PAGES
 import Home from './pages/Home';
