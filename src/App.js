@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // IMPORT COMPONENTS
 import Navbar from './components/Navbar';
 import { Scale } from 'styled-loaders-react';
+import Panel from './components/Panel';
 
 // IMPORT PAGES
 import Home from './pages/Home';
@@ -46,6 +47,7 @@ function App() {
             <Route path="/thailand" component={Thailand} />
             <Route path="/blog" component={Blog} />
           </Switch>
+          <Panel />
         </Router>
       )}
     </div>
