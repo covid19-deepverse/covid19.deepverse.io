@@ -1,0 +1,27 @@
+@import '../base/variables';
+
+.header__settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    //align-items: center;
+    padding: 30px;
+
+    .header__setting__title {
+        text-align: left;
+        padding: 30px 30px 40px 30px;
+        align-items: center;
+        justify-content: start;
+
+    }
+
+    .header__setting__el {
+        padding: 10px 20px 10px 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $font-size-h3;
+
+    }
+}
