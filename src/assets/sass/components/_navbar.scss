@@ -37,7 +37,8 @@
     width: 250px;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: -100%;
@@ -96,4 +97,17 @@
 
 span {
     margin-left: 16px;
+}
+
+.footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 30px;
+
+    .footer__organization {
+        font-size: $font-size-h5;
+        text-align: center;
+    }
 }
