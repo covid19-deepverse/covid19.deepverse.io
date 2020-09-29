@@ -40,9 +40,7 @@ function Navbar() {
               );
             })}
           </ul>
-          <div>
             <Settings/>
-          </div>
           <div className="footer">
             <h1 className="footer__organization">
               @2020 deepverse.io, All Right Reserved. Terms | Privacy | Cookie
