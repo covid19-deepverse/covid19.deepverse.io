@@ -3,6 +3,7 @@
 *   
 */
 
+
 .App {
     font-family: $font-family-primary;
     background-color: $primary-color;
@@ -13,19 +14,30 @@
     color: $white-color;
     padding: 30px;
     text-transform: $text-transform;
+    position: relative;
+    // z-index: 2;
+    // display: flex;
+    // display: grid;
+    // grid-template-columns: 300px auto 300px;
+
 }
 
 .home,
 .about,
 .donate,
 .news,
-.statistics,
+// .statistics,
 .thailand,
 .blog {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    // align-items: center;
+    justify-content: space-evenly;
     height: 80vh;
+    width: 90%;
     font-size: $font-size-h1;
     letter-spacing: $letter-spacing-primary;
+    // z-index: 1;
 }
