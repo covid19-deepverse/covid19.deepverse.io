@@ -1,16 +1,23 @@
 .left__container {
     width: 300px;
-    height: 100vh;
-    position: fixed;
-    align-items: flex-start;
+    height: 100%;
+    position: relative;
+    // align-items: flex-start;
     flex-direction: column;
-    justify-content: center;
-    padding: 30px 30px 30px 30px;
+    // justify-content: center;
+    padding: 0 30px 30px 30px;
+    top: 0;
+    left: 0;
+    // left: -110px;
 
     .header__left {
-        padding: 10px 10px 10px 0;
+        padding: 0 10px 10px 0;
         display: grid;
         align-items: flex-start;
+        position: absolute;
+        top: 0;
+        left: 30px;
+
 
 
         .header__logo {
@@ -25,6 +32,9 @@
     }
 
     .commodities__list {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
         height: 30vh;
         align-items: flex-end;
         flex-direction: column;

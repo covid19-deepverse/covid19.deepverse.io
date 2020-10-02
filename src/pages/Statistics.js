@@ -4,11 +4,14 @@
  */
 
 import React from 'react';
+import LineChart from '../components/LineChart';
 
 function Statistics() {
   return (
     <div className="statistics">
-      <h1>Statistics</h1>
+      <div className="chart">
+        <LineChart />
+      </div>
     </div>
   );
 }
