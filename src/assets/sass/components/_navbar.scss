@@ -11,6 +11,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 9;
 }
 
 .menu-bars {
@@ -37,6 +38,8 @@
     width: 300px;
     height: 100vh;
     display: flex;
+    // null z-index
+    z-index: 10;
     justify-content: space-between;
     flex-direction: column;
     position: fixed;
