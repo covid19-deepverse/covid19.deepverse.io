@@ -18,6 +18,7 @@ import Blog from './pages/Blog';
 
 // IMPORT SCSS
 import './assets/sass/_main.scss';
+import 'leaflet/dist/leaflet.css';
 
 // MAIN
 function App() {
@@ -37,7 +38,7 @@ function App() {
         </div>
       ) : (
         <Router>
-          <Navbar />
+          <Navbar className="app_navbar" />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
@@ -47,7 +48,7 @@ function App() {
             <Route path="/thailand" component={Thailand} />
             <Route path="/blog" component={Blog} />
           </Switch>
-          <Panel />
+          <Panel className="app_panel" />
         </Router>
       )}
     </div>
