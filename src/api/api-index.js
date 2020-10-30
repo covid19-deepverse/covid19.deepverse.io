@@ -20,3 +20,18 @@ app.get('/getCountry', (req, res) => {
         })
    
   })
+  app.get('/getCountry/:country', (req, res) => {
+    var country=req.params.country
+    let changeableUrl=url;
+    if(country){
+        changeableUrl=`${url}/countries/${country}`
+    }
+      request(changeableUrl,
+        function(error,response,body){
+            if(!error && response.statusCode ==200){
+                var parsedBody=JSON.parse(body)
+                res.send(parsedBody)
+            }
+        })
+   
+  })
