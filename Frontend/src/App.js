@@ -45,9 +45,9 @@ async componentDidMount (){
   this.setState({ isLoaded });
 
 //test call api from port 5000
-  axios.get('/getCountry').then(res=>{
-    console.log(res)
-  })
+  // axios.get('/getCountry').then(res=>{
+  //   console.log(res)
+  // })
 }
 
   

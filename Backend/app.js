@@ -15,7 +15,14 @@ app.get('/getCountry', (req, res) => {
         function(error,response,body){
             if(!error && response.statusCode ==200){
                 var parsedBody=JSON.parse(body)
-                res.send(parsedBody)
+                const modifiedData={
+                        confirmed:parsedBody.confirmed,
+                        recovered:parsedBody.recovered,
+                        deaths:parsedBody.deaths,
+                        lastUpdate:parsedBody.lastUpdate
+                    }
+            
+                res.send(modifiedData)
             }
         })
    
@@ -30,7 +37,14 @@ app.get('/getCountry/:country', (req, res) => {
         function(error,response,body){
             if(!error && response.statusCode ==200){
                 var parsedBody=JSON.parse(body)
-                res.send(parsedBody)
+                const modifiedData={
+                    confirmed:parsedBody.confirmed,
+                    recovered:parsedBody.recovered,
+                    deaths:parsedBody.deaths,
+                    lastUpdate:parsedBody.lastUpdate
+                }
+        
+            res.send(modifiedData)
             }
         })
    
@@ -44,7 +58,13 @@ app.get('/getCountry/:country', (req, res) => {
         function(error,response,body){
             if(!error && response.statusCode ==200){
                 var parsedBody=JSON.parse(body)
-                res.send(parsedBody)
+                const modifiedData =parsedBody.map((dailyData)=>({
+                    confirmed:dailyData.confirmed.total,
+                    deaths:dailyData.deaths.total,
+                    date:dailyData.reportDate
+        
+                }))
+                res.send(modifiedData)
             }
         })
    
