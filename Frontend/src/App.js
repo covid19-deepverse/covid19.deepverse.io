@@ -1,12 +1,13 @@
 // IMPORT REACT MODULES
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import axios from "axios";
 
 // IMPORT COMPONENTS
 import Navbar from './components/Navbar';
 import { Scale } from 'styled-loaders-react';
 import Panel from './components/Panel';
-import {fetchData} from './api';
+
 
 // IMPORT PAGES
 import Home from './pages/Home';
@@ -43,10 +44,10 @@ async componentDidMount (){
   const isLoaded = await asyncFunc();
   this.setState({ isLoaded });
 
-
-  const fetchdata=await fetchData();
-  this.setState({data:fetchdata});
-  console.log (this.state.data);
+//test call api from port 5000
+  axios.get('/getCountry').then(res=>{
+    console.log(res)
+  })
 }
 
   
