@@ -4,6 +4,8 @@ import * as HiIcons from 'react-icons/hi';
 import { SidebarData } from './SidebarData';
 import { IconContext } from 'react-icons';
 import Search from './Search';
+import DonateBtn from './DonateBnt';
+import Settings from './Settings';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -17,6 +19,7 @@ function Navbar() {
             <HiIcons.HiOutlineMenuAlt1 onClick={showSidebar} />
           </Link>
           <Search />
+          <DonateBtn />
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className="nav-menu-items" onClick={showSidebar}>
@@ -35,6 +38,13 @@ function Navbar() {
               );
             })}
           </ul>
+          <Settings />
+          <div className="footer">
+            <h1 className="footer__organization">
+              @2020 deepverse.io, All Right Reserved. Terms | Privacy | Cookie
+              Policy
+            </h1>
+          </div>
         </nav>
       </IconContext.Provider>
     </>
