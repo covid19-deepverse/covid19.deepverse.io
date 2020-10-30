@@ -1,0 +1,27 @@
+@import '../base/variables';
+
+.header__settings {
+    display: grid;
+    grid-template-columns: column;
+    column-gap: 20px;
+    row-gap: 25px;
+    padding: 30px;
+    
+
+    .header__setting__title {
+        padding-left: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        align-items: center;
+
+    }
+
+    .header__setting__el {
+        padding-left: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+}
