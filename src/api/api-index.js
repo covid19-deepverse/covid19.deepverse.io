@@ -48,6 +48,19 @@ app.get('/getCountry', (req, res) => {
         })
    
   })
+  app.get('/country',(req,res)=>{
+    let changeableUrl=`${url}/countries`;
+  
+      request(changeableUrl,
+        function(error,response,body){
+            if(!error && response.statusCode ==200){
+                var parsedBody=JSON.parse(body)
+                res.send(parsedBody)
+            }
+        })
+    
+  })
+
   app.listen(port, () => {
     console.log(`Start server at port ${port}.`)
   })
