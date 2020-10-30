@@ -15,7 +15,8 @@ class Statistics extends React.Component  {
   }
   handleCountryChange =async (country)=>{
     const fetchdata=await axios.get(`/getCountry/${country}`)
-    this.setState({data:fetchdata,country:country});
+    console.log(fetchdata.data)
+    // this.setState({data:fetchdata.data,country:country});
     //fetch data 
      
     // set the state
