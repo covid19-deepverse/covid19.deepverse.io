@@ -8,7 +8,7 @@ import axios from 'axios';
     try {
         const data=await axios.get('/daily');
 
-      
+      console.log(data.data)
         return data.data
     } catch (error) {
         console.log(error)
@@ -22,7 +22,7 @@ useEffect(()=>{
  
 },[setDailyData])
 
- console.log('here'+dailyData)
+//  console.log('here'+dailyData)
 
   const data = {labels:dailyData.map(({date})=>date),
   datasets:[{data:dailyData.map(({confirmed})=>confirmed),
