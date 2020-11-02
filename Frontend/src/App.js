@@ -72,7 +72,7 @@ render(){
             <Route path="/thailand" component={Thailand} />
             <Route path="/blog" component={Blog} />
           </Switch>
-          <Panel className="app_panel" />
+          {/* <Panel className="app_panel" /> */}
         </Router>
       )}
     </div>

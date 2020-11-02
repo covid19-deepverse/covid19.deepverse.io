@@ -12,7 +12,7 @@ function SelectCountry({handleCountryChange,country}){
     const [countries, setCountries] = useState([]);
     const fetchCountry =async ()=>{
         try {
-            const data=await axios.get('/getCountriesData');
+            const data=await axios.get('/getCountriesCode');
     
           console.log(data.data)
             return (data.data)

@@ -84,7 +84,7 @@ app.get('/getCountry/:country', (req, res) => {
         })
     
   })
-app.get('/getCountriesData',(req,res)=>{
+app.get('/getCountriesCode',(req,res)=>{
     let changeableUrl=`${url2}/countries`;
     request(changeableUrl,
         function(error,response,body){
@@ -97,6 +97,19 @@ app.get('/getCountriesData',(req,res)=>{
                 }))
                 
                 res.send(modifiedData)
+                
+            }
+        })
+
+})
+app.get('/getCountriesData',(req,res)=>{
+    let changeableUrl=`${url2}/countries`;
+    request(changeableUrl,
+        function(error,response,body){
+            if(!error && response.statusCode ==200){
+                var parsedBody=JSON.parse(body)
+                
+                res.send(parsedBody)
                 
             }
         })
