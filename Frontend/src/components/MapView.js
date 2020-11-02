@@ -4,20 +4,37 @@
  */
 
 import React from 'react';
-import { Map, TileLayer } from 'react-leaflet';
+import { Map as LeafletMap, GeoJSON, Marker, Popup } from 'react-leaflet';
+import worldGeoJSON from 'geojson-world-map';
 import { showDataOnMap } from './util';
 function MapView({ countries, casesType, center, zoom }) {
   
   return (
     <div className="leaflet-container">
-      <Map center={center} zoom={zoom}>
-        <TileLayer
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      <LeafletMap center={center}
+        zoom={zoom}
+        maxZoom={10}
+        attributionControl={true}
+        zoomControl={true}
+        doubleClickZoom={true}
+        scrollWheelZoom={true}
+        dragging={true}
+        animate={true}
+        easeLinearity={0.35}>
+          <GeoJSON
+          data={worldGeoJSON}
+          style={() => ({
+            color: '#4a83ec',
+            weight: 0.5,
+            fillColor: "#1a1d62",
+            fillOpacity: 1,
+          })}
         />
+          
+       
           {showDataOnMap(countries, casesType)}
 
-      </Map>
+      </LeafletMap>
     </div>
   );
 }

@@ -15,7 +15,7 @@ function Home() {
   const [country, setCountry] = useState('worldwide');
   const [casesType, setCasesType] = useState('cases');
   const [mapCenter, setMapCenter] = useState({ lat: 34.80764, lng: -40.4796 });
-  const [mapZoom, setMapZoom] = useState(3);
+  const [mapZoom, setMapZoom] = useState(2);
   const [mapCountries, setMapCountries] = useState([]);
 
   const fetchCountry =async ()=>{
